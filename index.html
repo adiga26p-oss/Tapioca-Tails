@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapioca Tails</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="startScreen" class="screen">
+        <!-- Name of game-->
+        <h1 id="title-text">Tapioca Tails</h1>
+
+        <!-- Box for selecting difficulty: easy, medium, or hard-->
+        <div id="difficulty-box">
+            <p class="diff-label">Choose Difficulty</p>
+            <label class="diff-option">Easy
+                <input type="radio" name="difficulty" value="easy">
+            </label>
+
+            <label class="diff-option">Medium
+                <input type="radio" name="difficulty" value="medium">
+            </label>
+
+            <label class="diff-option">Hard
+                <input type="radio" name="difficulty" value="hard">
+            </label>
+        </div>
+
+        <!-- Start button to proceed after difficulty is selected-->
+        <button id="startBtn" class="start-button" disabled>Start Game</button>
+    </div>
+
+    <!-- Dialogue appears after start button is clicked and leads into main game-->
+    <div id="dialogueScreen" class="screen" style="display:none;">
+        <div id="dialogueBox">
+            <p id="characterName"></p>
+            <p id="dialogueText"></p>
+            <p id="continueHint">Press ENTER to continue...</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
